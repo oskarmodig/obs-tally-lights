@@ -44,7 +44,17 @@ def on_switch(message):
 
 ws = obsws(host, port, password)
 ws.register(on_switch, events.SwitchScenes)
-ws.connect()
+
+connected = False
+
+while not connected:
+    try:
+        ws.connect()
+        connected = True
+    except KeyboardInterrupt:
+        exit()
+    except:
+        print("Retry connect")
 
 try:
     while True: # infinite loop to prevent script end. Someone who actually knows python is very welcome to write a cleaner way
