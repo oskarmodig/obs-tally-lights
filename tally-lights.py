@@ -3,7 +3,7 @@
 
 import sys
 import time
-import gpiozero import LED
+from gpiozero import LED
 
 import logging
 logging.basicConfig(level=logging.INFO)
