@@ -15,7 +15,7 @@ host = "YOUR-HOST" # Replace with IP or hostname of you OBS computer
 port = 4444 # 4444 is the default port, you can change it in obs-websocket on your computer
 password = "YOUR-OBS-WEBSOCKET-PASSWORD" # Password set in obs-websocket
 
-red = LED(17)
+red = LED(17) # 17 (and 18 below) is the GPIO PIN id
 green = LED(18)
 
 def on_switch(message):
