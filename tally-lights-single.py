@@ -15,19 +15,31 @@ host = "YOUR-HOST" # Replace with IP or hostname of you OBS computer
 port = 4444 # 4444 is the default port, you can change it in obs-websocket on your computer
 password = "YOUR-OBS-WEBSOCKET-PASSWORD" # Password set in obs-websocket
 
-light = LED(17)
+red = LED(17)
+green = LED(18)
 
 def on_switch(message):
     scenename = message.getSceneName()
 
-    scenes = ["Scene 1", "Camera 1", "PiP ProPresenter Cam1", "PiP Camera 1"] # Name of all OBS scenes to trigger light
+    camera1 = ["Scene 1", "Camera 1", "PiP ProPresenter Cam1", "PiP Camera 1"] # Name of all OBS scenes to trigger light 1
+    camera2 = ["Scene 2", "Camera 2", "PiP ProPresenter Cam2", "PiP Camera 2"] # Name of all OBS scenes to trigger light 2
+    # More cameras can be added here, then you also have to add an additional elif below 
 
-    if(scenename in scenes):
-        light.on()
+    if(scenename in camera1):
+        # SET LIGHT 1
+        green.off()
+        red.on()
+
+    elif(scenename in camera2):
+        # SET LIGHT 2
+        red.off()
+        green.on()
 
     else:
         # SET LIGHTS OFF
-        light.off()
+        print("Lights off")
+        green.off()
+        red.off()
 
 
 
