@@ -23,7 +23,7 @@ def on_switch(message):
 
     camera1 = ["Scene 1", "Camera 1", "PiP ProPresenter Cam1", "PiP Camera 1"] # Name of all OBS scenes to trigger light 1
     camera2 = ["Scene 2", "Camera 2", "PiP ProPresenter Cam2", "PiP Camera 2"] # Name of all OBS scenes to trigger light 2
-    # More cameras can be added here, then you also have to add an additional elif below 
+    # More cameras can be added here, then you also have to add an additional elif below, and a new color above
 
     if(scenename in camera1):
         # SET LIGHT 1
