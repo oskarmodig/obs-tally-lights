@@ -29,6 +29,6 @@
 * Add the file to startup for a more convenient workflow
 * Connect the LED to your RPi. From RPi ground, via resistor to LED to RPi PIN 17 (or, if you are using tally-lights-single.py, to numbers set on line 19 and below)
 
-Read [here](https://docs.google.com/document/d/1nQFsDAIhL4BkFzd1uDLOn3cNSB8JWlAI0Og3YWVYy6E) for detailed instructions
+**Read [here](https://docs.google.com/document/d/1nQFsDAIhL4BkFzd1uDLOn3cNSB8JWlAI0Og3YWVYy6E) for detailed instructions.**
 
 **Note** that this is my first ever python project, so I'll happily accept improvements.
